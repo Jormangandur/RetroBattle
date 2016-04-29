@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+    html {
+      margin: 0;
+      height: 100%;
+      background: -moz-linear-gradient(45deg, black, #680300);
+      /*above line creates smooth diagonal gradient*/
+      /*background: linear-gradient(to bottom right, black, red);*/
+    }
+    
+    #mainTitle {
+      text-align: center;
+      color: #FFFFFF;
+      font-family: 'Press Start 2P';
+      font-size: 3em;
+      top: 20%;
+    }
+    
+    canvas {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      padding: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    html {
+      background: -moz-linear-gradient(45deg, black, #680300);
+      /*above line creates smooth diagonal gradient*/
+      /*background: linear-gradient(to bottom right, black, red);*/
+    }
+  </style>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+  <meta charset="UTF-8">
+  <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+  <script src="mainGame.js"></script>
+</head>
+
+<body onload="init();">
+  <h1 id="mainTitle">Retro Battle</h1>
+  <canvas id="gameCanvas" width="512" height="544" style="border:1px solid #000000;"> </canvas>
+</body>
+
+</html>

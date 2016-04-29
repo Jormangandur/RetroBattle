@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script src="mainGame.js"></script>
+    <meta charset="UTF-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+        html {
+            margin: 0;
+            height: 100%;
+            background: -moz-linear-gradient(45deg, black, #680300);
+            /*above line creates smooth diagonal gradient*/
+            /*background: linear-gradient(to bottom right, black, red);*/
+        }
+        
+        #mainTitle {
+            text-align: center;
+            color: #FFFFFF;
+            font-family: 'Press Start 2P';
+            font-size: 3em;
+            top: 20%;
+        }
+        
+        #subTitle {
+            text-align: center;
+            color: #FFFFFF;
+            font-family: 'Press Start 2P';
+            font-size: 3em;
+            top: 30%;
+        }
+        
+        canvas {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            padding: 0;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        a.button,
+        input[type=text],
+        select {
+            -webkit-border-radius: 10;
+            -moz-border-radius: 10;
+            border-radius: 10px;
+            font-family: 'Press Start 2P';
+            text-align: center;
+            color: #ffffff;
+            font-size: 20px;
+            background: #000000;
+            padding: 10px 20px 10px 20px;
+            border: solid #808080 2px;
+            text-decoration: none;
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -ms-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 2%;
+            width:300px;
+        }
+        
+        a.button:hover,
+        input[type=text]:hover,
+        select:hover {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="mainTitle">Configure your game</h1>
+    <table align="center">
+        <tr>
+            <td>
+                <form>
+                    <input type="text" id="player1_name" value="Player1Name...">
+                </form>
+            </td>
+            <td>
+                <select id="_level">
+                    <option value="selectLevel" selected disabled>Select Level...</option>
+                    <option value="map1">Level 1</option>
+                    <option value="map2">Level 2</option>
+                </select>
+            </td>
+            <td>
+                <form>
+                    <input type="text" id="player2_name" value="Player2Name...">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <select id="_kills">
+                    <option value="killTarget" selected disabled>Select kills</option>
+                    <option value="1">1</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a onClick="randomiseGameVars();" class="button">Randomise</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><a onclick="setVars();" class="button">Begin Game</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>
